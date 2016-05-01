@@ -1,4 +1,12 @@
 public class Solution {
+    //use two bits to solve this problem
+    // [2nd bit, 1st bit] = [next state, current state]
+
+    // - 00  dead (next) <- dead (current)
+    // - 01  dead (next) <- live (current)  
+    // - 10  live (next) <- dead (current)  
+    // - 11  live (next) <- live (current)
+    //we can use nums[i][j] & 1 to get current state and nums[i][j] >> 1 to get next state
     public void gameOfLife(int[][] board) {
         int rows = board.length;
         int cols = board[0].length;
