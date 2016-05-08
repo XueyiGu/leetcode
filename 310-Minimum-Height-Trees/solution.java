@@ -20,7 +20,9 @@ public class Solution {
         List<Integer> leaves = new ArrayList<>();
         for (int i = 0; i < n; ++i)
         {
-            if (adj.get(i).size() == 1) leaves.add(i);
+            if (adj.get(i).size() == 1){
+                leaves.add(i);
+            } 
         }
 
         while (n > 2) {
@@ -29,7 +31,9 @@ public class Solution {
             for (int i : leaves) {
                 int j = adj.get(i).iterator().next();
                 adj.get(j).remove(i);
-                if (adj.get(j).size() == 1) newLeaves.add(j);
+                if (adj.get(j).size() == 1){
+                    newLeaves.add(j);
+                } 
             }
             leaves = newLeaves;
         }
