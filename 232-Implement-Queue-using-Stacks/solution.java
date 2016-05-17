@@ -5,8 +5,7 @@ class MyQueue {
     public void push(int x) 
     {
         while(!pop.empty()){
-            int top = (int) pop.pop();
-            push.push(top);
+            push.push(pop.pop());
         }
         push.push(x);
     }
@@ -15,8 +14,7 @@ class MyQueue {
     public void pop() 
     {
         while(!push.empty()){
-            int top = (int) push.pop();
-            pop.push(top);
+            pop.push(push.pop());
         }
         pop.pop();
     }
@@ -25,8 +23,7 @@ class MyQueue {
     public int peek() 
     {
         while(!push.empty()){
-            int top = (int)push.pop();
-            pop.push(top);
+            pop.push(push.pop());
         }
         int top = (int)pop.peek();
         return top;
