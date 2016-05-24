@@ -23,7 +23,7 @@ Can you solve it without using extra space?
 
 <div id="tags" class="btn btn-xs btn-warning">Show Tags</div>
 
-<span class="hidebutton">[Linked List](/tag/linked-list/) [Two Pointers](/tag/two-pointers/)</span></div>
+<span class="hidebutton" style="display: none;">[Linked List](/tag/linked-list/) [Two Pointers](/tag/two-pointers/)</span></div>
 
 <div>
 
