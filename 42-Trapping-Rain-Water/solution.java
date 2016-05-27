@@ -2,6 +2,7 @@ public class Solution {
     public int trap(int[] height) 
     {
         
+        
         if(height == null || height.length < 3){
             return 0;
         }
@@ -32,6 +33,7 @@ public class Solution {
             }
         }
         return water;
+    
     
     }
 }
