@@ -23,10 +23,10 @@ Given _m_, _n_ satisfy the following condition:
 
 <div id="tags" class="btn btn-xs btn-warning">Show Tags</div>
 
-<span class="hidebutton">[Linked List](/tag/linked-list/)</span></div>
+<span class="hidebutton" style="display: none;">[Linked List](/tag/linked-list/)</span></div>
 
 <div>
 
 <div id="similar" class="btn btn-xs btn-warning">Show Similar Problems</div>
 
-<span class="hidebutton">[(E) Reverse Linked List](/problems/reverse-linked-list/)</span></div>
+<span class="hidebutton" style="display: none;">[(E) Reverse Linked List](/problems/reverse-linked-list/)</span></div>
