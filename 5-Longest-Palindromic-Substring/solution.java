@@ -5,32 +5,27 @@ public class Solution {
             return s;
         }
         
-        int n = s.length();
-        boolean[][] isPalindrome = new boolean[n][n];
-        for(int i = 0; i < n; i++){
-            isPalindrome[i][i] = true;
-        }
-        
-        for(int i = n - 1; i > -1; i--){
-            for(int j = i + 1; j < n; j++){
-                if(s.charAt(i) == s.charAt(j) && (j - i <= 1 || isPalindrome[i + 1][j - 1])){
-                    isPalindrome[i][j] = true;
-                }
+        String result = s.substring(0, 1);
+        for(int i = 1; i < s.length(); i++){
+            String sub1 = find(s, i - 1, i);
+            if(sub1.length() > result.length()){
+                result = sub1;
             }
-        }
-        
-        int max = 0;
-        String result = "";
-        for(int i = 0; i < n; i++){
-            for(int j = i; j < n; j++){
-                if(isPalindrome[i][j]){
-                    if(j - i + 1 > max){
-                        max = j - i + 1;
-                        result = s.substring(i, j + 1);
-                    }
-                }
+            
+            String sub2 = find(s, i, i);
+            if(sub2.length() > result.length()){
+                result = sub2;
             }
         }
         return result;
+    }
+    
+    //find the longest palindromic substring for the given center
+    private String find(String s, int begin, int end){
+        while(begin > -1 && end < s.length() && s.charAt(begin) == s.charAt(end)){
+            begin--;
+            end++;
+        }
+        return s.substring(begin + 1, end);
     }
 }
