@@ -51,9 +51,9 @@ The above binary tree is serialized as `"{1,2,3,#,#,4,#,#,5}"`.</div>
 
 <div>
 
-<div id="company_tags" class="btn btn-xs btn-warning">Show Company Tags</div>
+<div id="company_tags" class="btn btn-xs btn-warning">Hide Company Tags</div>
 
-<span class="hidebutton">[Bloomberg](/company/bloomberg/) [LinkedIn](/company/linkedin/) [Microsoft](/company/microsoft/)</span></div>
+<span class="hidebutton" style="display: inline;">[Bloomberg](/company/bloomberg/) [LinkedIn](/company/linkedin/) [Microsoft](/company/microsoft/)</span></div>
 
 <div>
 
