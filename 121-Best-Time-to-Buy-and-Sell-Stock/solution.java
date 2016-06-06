@@ -5,13 +5,10 @@ public class Solution {
             return 0;
         }
         int max = 0;
-        int[] profit = new int[prices.length];
-        profit[0] = 0;
         int smallest = prices[0];
         for(int i = 1; i < prices.length; i++){
             if(prices[i] >= smallest){
-                profit[i] = prices[i] - smallest;
-                max = Math.max(max, profit[i]);
+                max = Math.max(max, prices[i] - smallest);
             }else{
                 smallest = prices[i];
             }
