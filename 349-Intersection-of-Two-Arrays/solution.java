@@ -12,19 +12,14 @@ public class Solution {
                 map.put(nums1[i], false);
             }
         }
-        
+        int count = 0;
         for(int i = 0; i < nums2.length; i++){
-            if(map.containsKey(nums2[i])){
+            if(map.containsKey(nums2[i]) && map.get(nums2[i]) == false){
+                count++;
                 map.put(nums2[i], true);
             }
         }
         
-        int count = 0;
-        for(int i : map.keySet()){
-            if(map.get(i) == true){
-                count++;
-            }
-        }
         int[] result = new int[count];
         int j = 0;
         for(int i : map.keySet()){
