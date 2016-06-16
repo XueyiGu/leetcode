@@ -8,26 +8,23 @@
  * }
  */
 public class Solution {
-    
     public void flatten(TreeNode root) 
     {
         if(root == null){
             return;
         }
         
-        if(root.left == null){
-            flatten(root.right);
-        }else{
-            TreeNode temp = root.right;
+        if(root.left != null){
+            TreeNode right = root.right;
             root.right = root.left;
             root.left = null;
-            //find the right-most node of the current right subtree
+            //find the most right son
             TreeNode current = root.right;
             while(current.right != null){
                 current = current.right;
             }
-            current.right = temp;
-            flatten(root.right);
+            current.right = right;
         }
+        flatten(root.right);
     }
 }
