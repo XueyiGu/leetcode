@@ -8,13 +8,12 @@
  * }
  */
 public class Solution {
-    public boolean isBalanced(TreeNode root) 
-    {
+    public boolean isBalanced(TreeNode root){
         if(root == null){
             return true;
         }
-        
-        if(Math.abs(depth(root.left) - depth(root.right)) <= 1){
+        int diff = Math.abs(depth(root.left) - depth(root.right));
+        if(diff <= 1){
             return isBalanced(root.left) && isBalanced(root.right);
         }else{
             return false;
