@@ -8,18 +8,16 @@
  * }
  */
 public class Solution {
-    public boolean isValidBST(TreeNode root) 
-    {
-        return valid(root, Long.MIN_VALUE, Long.MAX_VALUE);
+    public boolean isValidBST(TreeNode root){
+        return validate(root, Long.MIN_VALUE, Long.MAX_VALUE);
     }
     
-    private boolean valid(TreeNode node, long min, long max){
+    private boolean validate(TreeNode node, long min, long max){
         if(node == null){
             return true;
         }
-        
         if(node.val > min && node.val < max){
-            return valid(node.left, min, node.val) && valid(node.right, node.val, max);
+            return validate(node.left, min, node.val) && validate(node.right, node.val, max);
         }else{
             return false;
         }
